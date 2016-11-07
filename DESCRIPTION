@@ -1,0 +1,16 @@
+Package: amnlp
+Type: Package
+Title: AM Natural Language Proccessing
+Version: 0.1.0
+Authors@R: person("Aleksandr", "Meshkov", email = "agrobov@gmail.com",
+  role = c("aut", "cre"))
+Description: Some additional tools for natural language proccessing
+Depends:
+    R (>= 3.3.0)
+License: CC-BY-SA-4.0 (Attribution-ShareAlike 4.0 International)
+LazyData: TRUE
+Imports:
+    data.table,
+    stringr,
+    tm
+RoxygenNote: 5.0.1
