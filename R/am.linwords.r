@@ -6,6 +6,7 @@
 #' @param term2 character vector
 #' @return Number. Percentage (share) of common words between two input strings
 #' @seealso am.linwordsu, am.linstems
+#' @export
 
 am.linwords <- function(term1, term2){
 
@@ -33,6 +34,7 @@ am.linwords <- function(term1, term2){
 #' @param term2 character vector
 #' @return Number. Percentage (share) of common words between two input strings
 #' @seealso am.linwords, am.stems
+#' @export
 
 am.linwordsu <- function(term1, term2){
 
@@ -58,6 +60,7 @@ am.linwordsu <- function(term1, term2){
 #' @param minlen number: minimal word length
 #' @return Number. Percentage (share) of common words between two input strings
 #' @seealso am.linwords, am.linwordsu
+#' @export
 
 am.linstems <- function(term1
                         , term2

@@ -4,6 +4,7 @@
 #'
 #' @return Character vector of stopwords. Source: http://xpo6.com/list-of-english-stop-words/
 #' @seealso ...
+#' @export
 
 am.stopwords.en <- function() {
 

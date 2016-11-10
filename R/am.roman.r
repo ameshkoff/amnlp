@@ -5,6 +5,7 @@
 #' @param x character
 #' @return Character
 #' @seealso ...
+#' @export
 
 am.roman <- function(x) {
 

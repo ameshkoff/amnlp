@@ -8,6 +8,7 @@
 #' @param prfx character: prefix for the returned word pairs (optional)
 #' @return Character
 #' @seealso ...
+#' @export
 
 am.pairs <- function(term1
                      , term2

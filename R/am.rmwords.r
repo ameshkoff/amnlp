@@ -6,6 +6,7 @@
 #' @param words character vector of words to remove
 #' @return Character vector
 #' @seealso ...
+#' @export
 
 am.rmwords <- function(vc
                     , words) {
