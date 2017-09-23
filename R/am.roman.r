@@ -1,16 +1,18 @@
-#' Romanization of cyrillic text
+#' Romanization of the cyrillic character vector. Vectorized
 #'
-#' Cyrillic text to roman letter
+#' Cyrillic letters to roman ones
 #'
 #' @param x character
 #' @return Character
 #' @seealso ...
 #' @import data.table
+#' @import stringr
+#' @import stringi
 #' @export
 
 am.roman <- function(x) {
 
-  alphabets.t <- data.table(read.table(text="
+  alphabets.t <- fread(input = "
 from to
 а a
 б b
@@ -45,11 +47,14 @@ from to
 э e
 ю iu
 я ia"
-  ,header=TRUE))
-  alphabets.t[is.na(to),to:=""]
+  , header = TRUE
+  , stringsAsFactors = FALSE
+  , encoding = "UTF-8")
+
+  alphabets.t[is.na(to), to:=""]
 
   for(i in 1:nrow(alphabets.t) ) {
-    x <- gsub(alphabets.t[,from][i], alphabets.t[,to][i], x)
+    x <- str_replace_all(x, alphabets.t[i, from], alphabets.t[i, to])
   }
 
   remove(alphabets.t)
